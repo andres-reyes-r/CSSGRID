@@ -2,19 +2,15 @@ body{
     color: darkgreen;
 }
 .container{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
     display: grid;
-    /* grid-template-columns: repeat(7, 1fr); */
-    grid-template-columns: [inicio] 1fr [l2] 1fr [l3] 1fr [destacado-end] 1fr [l5] 1fr [destacado2-end] 1fr [l7] 1fr [final] ;
-    grid-template-rows: [inicio] 200px [inicio2] 200px [final];
-    /* grid-auto-flow: column; */
-    /* grid-auto-columns: 1fr; */
-    grid-auto-rows: 100px;
-
-    height: 100vh;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     gap: 5px;
-
+    height: 100vh;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-rows: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
 }
 
 .item{
@@ -23,29 +19,9 @@ body{
     padding: 10px;
 }
 
-.item:nth-of-type(1){
-    /* grid-column: 1 / span 3;
-    grid-row: 1 / span 2; */
-    grid-column: inicio / destacado-end;
-    grid-row: inicio / final;
-}
-
-.item:nth-of-type(2){
-    /* grid-column: 4 / span 2;
-    grid-row: 1 / span 2; */
-    grid-column: destacado-end / destacado2-end;
-    grid-row: inicio / final;
-}
-
-.item:nth-of-type(3){
-    /* grid-column: 6 / span 2; */
-    grid-column: destacado2-end / final;
-
-}
-
-.item .item{
-    background: indigo;
-    color: ivory;
+.item:nth-of-type(5){
+    align-self: start;
+    justify-self: start;
 }
 
 .header{
