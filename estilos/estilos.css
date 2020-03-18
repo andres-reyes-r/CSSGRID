@@ -10,10 +10,12 @@ body{
     /* grid-template: 300px 100px 100px / repeat(4, minmax(200px, 1fr)); */
     /* column-gap: 10px;
     row-gap: 10px; */
-    gap: 10px;
-    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-template: 100px 1fr 150px / 200px 1fr;
     height: 100vh;
-    grid-template-areas: "";
+    grid-template-areas: "header header"
+                         "left contenido"
+                         "footer footer";
 
 }
 
@@ -33,4 +35,20 @@ body{
 .item .item{
     background: indigo;
     color: ivory;
+}
+
+.header{
+    grid-area:header;
+}
+
+.left{
+    grid-area: left;
+}
+
+.contenido{
+    grid-area: contenido;
+}
+
+.footer{
+    grid-area: footer;
 }
