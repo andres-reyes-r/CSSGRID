@@ -8,11 +8,10 @@ body{
     /* grid-template-columns: repeat(7, 1fr); */
     grid-template-columns: [inicio] 1fr [l2] 1fr [l3] 1fr [destacado-end] 1fr [l5] 1fr [destacado2-end] 1fr [l7] 1fr [final] ;
     grid-template-rows: [inicio] 200px [inicio2] 200px [final];
-    /* grid-template: 300px 100px 100px / repeat(4, minmax(200px, 1fr)); */
-    /* column-gap: 10px;
-    row-gap: 10px; */
-    /* grid-gap: 10px; */
-    /* grid-template: 100px 1fr 150px / 200px 1fr; */
+    /* grid-auto-flow: column; */
+    /* grid-auto-columns: 1fr; */
+    grid-auto-rows: 100px;
+
     height: 100vh;
     gap: 5px;
 
