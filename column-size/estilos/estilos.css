@@ -5,17 +5,14 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     display: grid;
-    /* grid-template-columns: 25% 200px 25%;
-    grid-template-rows: 300px 300px; */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     /* grid-template: 300px 100px 100px / repeat(4, minmax(200px, 1fr)); */
     /* column-gap: 10px;
     row-gap: 10px; */
     grid-gap: 10px;
-    grid-template: 100px 1fr 150px / 200px 1fr;
+    /* grid-template: 100px 1fr 150px / 200px 1fr; */
     height: 100vh;
-    grid-template-areas: "header header"
-                         "left contenido"
-                         "footer footer";
 
 }
 
@@ -25,13 +22,20 @@ body{
     padding: 10px;
 }
 
-.item:nth-of-type(4){
+.item:nth-of-type(1){
     background: greenyellow;
-    overflow: auto;
-    display: grid;
-    grid-template: 50px 50px 50px / 200px 200px 200px;
-
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
+
+.item:nth-of-type(8){
+    grid-column: 1 / span 2;
+}
+
+.item:nth-of-type(7){
+    grid-column: 2 / 4;
+}
+
 .item .item{
     background: indigo;
     color: ivory;
